@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #003366; /*azul escuro classico*/
+    --second-color: #f4f4f4;
+    --accent-color: #ffd700; /*dourado para o hover*/
+    --text-color: #333;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--body-font);
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color)
+}
+
+main{
+    max-width: 900px; /*largura limitada*/
+    margin: 20px auto; /*centralizado horizontalmente*/
+    padding: 0 20px;
+    /*layout dos cards usando grid*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img{
+    height: auto;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#course-title{
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+nav{
+    background-color: #222;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav li{
+    flex: 1;
+}
+
+nav a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background-color: var(--accent-color);
+    color: black;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 30px;
+}
