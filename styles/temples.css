@@ -112,7 +112,7 @@ figure img{
 figcaption{
     padding: 0.8rem;
     font-weight: 500;
-    color: #038a30;
+    color: #026b25;
 }
 
 footer{
@@ -123,8 +123,4 @@ footer{
     font-size: 0.85rem;
     margin-top: 2rem;
     line-height: 1.5;
-}
-
-@media (min-width: 48rem) {
-    @import url("temples-large.css");
 }
