@@ -1,0 +1,220 @@
+/* --- Variáveis CSS Globais Obrigatórias --- */
+:root {
+    --primary-color: #0f0c73;
+    --secondary-color: #514ea7;
+    --accent-color: #006f3d;
+    --bg-color: #f4f6f4;
+    --text-color: #333;
+    --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+.title-container {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 1rem;
+}
+
+.title-container h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.green-bar {
+    height: 8px;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.content-cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1rem 0;
+}
+
+.card {
+    background-color: #fff;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 320px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: relative;
+    padding-top: 3.5rem;
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1rem;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.card-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Controle do SVG no Mobile */
+.weather-svg-mobile {
+    display: inline-block;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.35rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    text-align: right;
+    padding-right: 0.75rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    text-align: left;
+    padding-left: 0.75rem;
+    color: #222;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.last-modified {
+    opacity: 0.8;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+}
+
+/* ----------------------------------------- */
+/* --- MEDIA QUERY: DESKTOP  --- */
+/* ----------------------------------------- */
+@media (min-width: 1000px) {
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    picture {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+    }
+
+    .hero-image {
+        max-height: 550px;
+    }
+
+    .content-cards {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr; 
+        padding: 2.5rem;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .card {
+        margin: 0;
+        background-color: var(--card-bg);
+        backdrop-filter: blur(4px);
+        width: 320px;
+        border: none;
+    }
+
+    /* REQUISITO: Oculta o SVG no Desktop e usa Pseudo-elemento */
+    .weather-svg-mobile {
+        display: none;
+    }
+
+    /* REQUISITO EXIGIDO: Pseudo-elemento para o Emoticon de clima no Desktop */
+    .weather-card .card-header h2::after {
+        content: " ⛅";
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+    }
+
+    .data-card {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        justify-self: start;
+        align-self: start;
+    }
+
+    .weather-card {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+    }
+}
