@@ -1,0 +1,43 @@
+@media (min-width: 48rem){
+    header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    nav{
+        display: flex !important;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    nav a{
+        border-top: none;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+    }
+
+    nav a:hover{
+        background-color: #fff;
+        color: #006f25;
+        border-radius: 4px;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    figure{
+        max-width: 100%;
+    }
+}
+
