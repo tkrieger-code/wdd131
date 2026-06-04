@@ -1,0 +1,118 @@
+:root{
+    --primary-color: #2e7d32; /* verde sálvia - títulos principais, e destaques*/
+    --second-color: #e65100; /* laranja terracota - para realces, botões, tags de alerta e contrastes*/
+    --bg-color: #fafafa; /* off-white - fundo*/
+    --text-color: #2c3e50; /* cinza escuro - legibilidade textual*/
+    --card-bg: #ffffff; /* branco - fundo dos cards e seções*/
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+}
+
+header{
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-brand{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-preview{
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1{
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.3rem;
+}
+
+h2{
+    color: var(--primary-color);
+    border-left: 5px solid var(--second-color);
+    padding-left: 10px;
+    margin-top: 2rem;
+}
+
+h3{
+    color: var(--second-color);
+    margin-bottom: 0.5rem;
+}
+
+section{
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+ul{
+    padding-left: 20px;
+}
+
+li{
+    margin-bottom: 0.5rem;
+}
+
+.color-box-container{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-box{
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    flex: 1;
+}
+
+.box-primary{background-color: var(--primary-color);}
+.box-secondary{background-color: var(--second-color);}
+.box-text{background-color: var(--text-color);}
+
+.wireframe-placeholder{
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    text-align: center;
+    background-color: #eee;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem;
+}
+
+/* Classe para estilizar e dar acabamento às imagens dos wireframes */
+.wireframe-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; /* Dica extra: ajuda a alinhar melhor a imagem em blocos */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
