@@ -107,12 +107,16 @@ footer{
     padding: 1rem;
 }
 
-/* Classe para estilizar e dar acabamento às imagens dos wireframes */
+.wireframe-container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
 .wireframe-img {
     max-width: 100%;
     height: auto;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: block; /* Dica extra: ajuda a alinhar melhor a imagem em blocos */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block;
+    margin: 0 auto;
 }
