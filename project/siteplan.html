@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Planning Document - Krie na Cozinha</title>
+    <style>
+        :root{
+            --primary-color: #2e7d32; /* verde sálvia - títulos principais, e destaques*/
+            --second-color: #e65100; /* laranja terracota - para realces, botões, tags de alerta e contrastes*/
+            --bg-color: #fafafa; /* off-white - fundo*/
+            --text-color: #2c3e50; /* cinza escuro - legibilidade textual*/
+            --card-bg: #ffffff; /* branco - fundo dos cards e seções*/
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        header{
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .header-brand{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-preview{
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        h2{
+            color: var(--primary-color);
+            border-left: 5px solid var(--second-color);
+            padding-left: 10px;
+            margin-top: 2rem;
+        }
+
+        h3{
+            color: var(--second-color);
+            margin-bottom: 0.5rem;
+        }
+
+        section{
+            background-color: var(--bg-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        ul{
+            padding-left: 20px;
+        }
+
+        li{
+            margin-bottom: 0.5rem;
+        }
+
+        .color-box-container{
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .color-box{
+            padding: 1rem;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .box-primary{background-color: var(--primary-color);}
+        .box-secondary{background-color: var(--second-color);}
+        .box-text{background-color: var(--text-color);}
+
+        .wireframe-placeholder{
+            border: 2px dashed #ccc;
+            padding: 2rem;
+            text-align: center;
+            background-color: #eee;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        footer{
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="images/logo-krie.png" alt="Krie na Cozinha Logo" class="logo-preview">
+            <div>
+                <h1>Website Planning Document</h1>
+                <p><strong>Course:</strong> WDD Dynamic Web Fundamentals</p>
+                <p><strong>Developer:</strong> Tatiane Krieger</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site and Domain</h2>
+            <h3>Krie na Cozinha</h3>
+            <p><strong>Planned Domain:</strong><code> krienacozinha.kyte.site</code></p>
+            <p><strong>Reason for choosing this name:</strong> "Krie na Cozinha" uses a clever wordplay combining my last name (Krieger) with the Portuguese word "Cria" (to create/creativity). It establishes a highly personal brand identifier that connects directly to culinary production, meal preparation, and kitchen organization.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The purpose of <em>Krie na Cozinha</em> is to provide an interactive, structured system for individuals looking to master weekly meal prep and organized freezer meal production. The platform delivers step-by-step guides on batch cooking and safe preservation, a dynamic database of freezer-friendly recipes, and a fully functional planning tool where users can build, calculate, and persist their customized weekly meal schedules.</p>
+        </section>
+
+        <section>
+            <h2>Target Audience Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> "I have a very busy routine during the week and want to start freezing my meals to save time, but I am afraid of food losing its quality or spoiling. Where can I find clear parameters on containers, safe freezing methods, and reheating instructions?"</li>
+                <li><strong>Scenario 2:</strong> "I need to plan my dinners for the upcoming week using specific food groups. Can I easily look through a recipe list, filter them by category, and select them to assemble a visual weekly planner that stays saved on my browser?"</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Scheme</h2>
+            <p>The visual identity is drawn directly from the corporate logo, highlighting freshness, culinary balance, and layout cleanliness:</p>
+            <ul>
+                <li><strong>Primary Color (#2e7d32):</strong> A vibrant Herb Green matching the logo's central graphic leaf. Used for main headers, active page navigation, and primary category tags to evoke health and natural ingredients.</li>
+                <li><strong>Secondary Color (#e65100):</strong> A warm Terracotta Orange used for call-to-action buttons, user event highlights, and dynamic alerts to stimulate appetite and create a professional contrast.</li>
+                <li><strong>Background Color (#fafafa):</strong> An Off-White baseline used for the document bodies to provide high contrast, structural clarity, and an organized, modern aesthetic.</li>
+            </ul>
+            <div class="color-box-container">
+                <div class="color-box box-primary">Primary Green (#2e7d32)</div>
+                <div class="color-box box-secondary">Secondary Orange (#e65100)</div>
+                <div class="color-box box-text">Text Color (#2c3e50)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Font Family:</strong> <code>'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</code></li>
+                <li><strong>Application Strategy:</strong> This modern, universally supported sans-serif typeface ensures excellent readability across diverse device screen sizes. Bold weights will be applied to section headings to establish visual hierarchy, while clean regular body styling (line-height: 1.6) will handle recipes and data tables to maintain strict mobile accessibility standards.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>Layout blueprint for the application's central views:</p>
+            
+            <h3>Mobile View Layout</h3>
+            <div style="margin-top: 1rem; text-align: center;">
+                <img src="images/mobile-view-wireframe.webp" alt="Visual blueprint for mobile view layout" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <h3>Desktop View Layout</h3>
+            <div style="margin-top: 1rem; text-align: center;">
+                <img src="images/desktop-view-wireframe.webp" alt="Visual blueprint for desktop view layout" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Tatiane Krieger| Rio Grande do Sul, Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Injeta o ano atual automaticamente
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+            // 2. Injeta a data da última modificação do arquivo
+            document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+        });
+    </script>
+</body>
+
+</html>
