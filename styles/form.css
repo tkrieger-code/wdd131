@@ -155,3 +155,22 @@ input[type="submit"]:hover {
     display: block;
     color: var(--text-color); /* Certifique-se de que combine com suas variáveis */
 }
+
+/* --- REGRA DE RESPONSIVIDADE (MEDIA QUERY) --- */
+@media screen and (min-width: 600px) {
+    body {
+        /* Adiciona um fundo ligeiramente diferente ou gradiente para telas grandes, se desejar */
+        background-color: #f0f4f8; 
+    }
+
+    form {
+        /* Aumenta o espaçamento interno do formulário em telas maiores para dar mais respiro */
+        padding: 3rem;
+        /* Adiciona uma sombra um pouco mais elegante em telas grandes */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    header h1 {
+        font-size: 2.5rem; /* Deixa o título ligeiramente maior em desktops */
+    }
+}
