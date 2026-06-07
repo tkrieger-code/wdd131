@@ -1,0 +1,157 @@
+/* Configurações Gerais e Tipografia */
+:root {
+    --primary-color: #2b5a8f;
+    --accent-color: #e0a910;
+    --text-color: #333;
+    --bg-color: #f7f9fa;
+    --form-bg: #ffffff;
+    --border-color: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Estrutura do Formulário */
+form {
+    background: var(--form-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #ce2c2c;
+}
+
+/* Inputs, Select e Textarea */
+select, 
+input[type="date"], 
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+select:focus, 
+input:focus, 
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(43, 90, 143, 0.2);
+}
+
+/* Estilização dos Checkboxes */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+}
+
+/* Sistema Avançado de Estrelas (Radio Button) */
+.rating-group {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem para a lógica do CSS funcionar da esquerda para a direita */
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rating-group input[type="radio"] {
+    display: none; /* Esconde o botão de rádio padrão */
+}
+
+.rating-group label {
+    font-size: 2rem;
+    color: var(--border-color);
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0;
+}
+
+/* Efeito Hover e Seleção das Estrelas */
+.rating-group input[type="radio"]:checked ~ label,
+.rating-group label:hover,
+.rating-group label:hover ~ label {
+    color: var(--accent-color);
+    content: "★"; /* Substitui a estrela vazia por cheia visualmente */
+}
+
+/* Botão de Envio */
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e3f66;
+}
+
+/* Remove as bordas e os espaçamentos padrão do fieldset */
+.rating-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estiliza a legenda para se comportar exatamente como as outras labels */
+.rating-fieldset legend {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--text-color); /* Certifique-se de que combine com suas variáveis */
+}
