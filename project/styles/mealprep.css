@@ -1,0 +1,533 @@
+:root{
+    --primary-color: #2e7d32; /* verde sálvia - títulos principais, e destaques*/
+    --secondary-color: #e65100; /* laranja terracota - para realces, botões, tags de alerta e contrastes*/
+    --bg-color: #eaffea; /* off-white - fundo*/
+    --text-color: #1a252f; /* cinza escuro - legibilidade textual*/
+    --card-bg: #ffffff; /* branco - fundo dos cards e seções*/
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* configurações gerais*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* cabeçalho e navegação (foco em flexbox responsivo)*/
+header{
+    background-color: var(--card-bg);
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column; /* mobile first: empilhado verticalmente*/
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    max-width: 130px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.nav-links a:hover, .nav-links a.active{
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* conteúdo principal (layout base da home)*/
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* seção hero banner*/
+.hero{
+    position: relative;
+    min-height: 350px; /* altura minima do banner*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--card-bg);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden; /* garante que a imagem não saia das bordas arredondadas*/
+    margin-bottom: 2rem;
+}
+
+/* transforma a img em plano de fundo responsivo*/
+.hero img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem cobrir o espaço sem distorcer */
+    z-index: 1; /* joga a imagem pra trás*/
+}
+
+/* filtro escuro para dar contraste e leitura ao texto branco*/
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 125, 50, 0.6); /* verde salvia com 60% de transparencia */
+    z-index: 2; /* fica acima da imagem, mas abaixo do texto*/
+}
+
+/* força o texto a ficar na frente de todas as camadas*/
+.hero h1, .hero p{
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* sombra para destacar as letras*/
+}
+
+.hero p{
+    font-size: 1.5rem;
+}
+
+/* Estilização do botão dentro do Hero Banner */
+.btn-hero{
+    position: relative;
+    z-index: 3; /* Garante que fique na frente do filtro escuro da imagem */
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: var(--secondary-color); /* Laranja terracota da sua marca */
+    color: var(--card-bg) !important; /* Força o texto a ficar branco */
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Deixa o botão arredondado e moderno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade sobre o fundo */
+    transition: all 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.btn-hero:hover {
+    background-color: #b33f00; /* Um terracota um pouquinho mais escuro */
+    transform: translateY(-3px); /* Levanta levemente o botão dando sensação de clique */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao levantar */
+}
+
+/* Efeito ao clicar no botão */
+.btn-hero:active {
+    transform: translateY(-1px); /* Desce o botão de volta quase ao normal ao ser pressionado */
+}
+
+.hero h1{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* seções de texto*/
+.intro{
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.intro h2{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+ 
+/* rodapé*/
+footer{
+    background-color: var(--text-color);
+    color: var(--card-bg);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+footer p{
+    margin-bottom: 0.5rem;
+}
+
+/* seção do cardápio (menu styles)*/
+.menu-intro{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* área de botões de filtro*/
+.filter-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* garante que quebre linha no celular*/
+}
+
+.btn-filter{
+    background-color: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.active{
+    background-color: var(--primary-color);
+    color: var(--card-bg);
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DOS CARDS DO MENU (PÁGINA MENU)
+   ========================================== */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Forçamos o comportamento horizontal usando !important para anular interferências da Home */
+.menu-grid .recipe-card {
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+    border-top: 4px solid var(--primary-color) !important;
+    display: flex !important;
+    flex-direction: row !important; 
+    align-items: stretch !important;
+    min-height: 200px !important;
+    height: 220px !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ajustes da Imagem no Menu */
+.menu-grid .recipe-img {
+    width: 38% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    display: block !important;
+}
+
+/* Faixa Laranja corrigida contra esmagamento */
+.menu-grid .recipe-badge {
+    width: 35px !important;
+    min-width: 35px !important; /* Garante que ela nunca suma */
+    background-color: var(--secondary-color) !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Box de detalhes interna */
+.menu-grid .card-details {
+    flex: 1 !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: #fff !important;
+}
+
+.menu-grid .recipe-card h3 {
+    font-size: 16px !important;
+    color: var(--text-color) !important;
+    margin-bottom: 6px !important;
+    line-height: 1.3 !important;
+}
+
+.menu-grid .recipe-card p {
+    font-size: 12.5px !important;
+    color: #1e272e !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+}
+
+.menu-grid .recipe-time {
+    display: block !important;
+    font-size: 11px !important;
+    color: #595959 !important;
+    font-style: italic !important;
+    border-top: 1px solid #eee !important;
+    padding-top: 8px !important;
+    margin-top: auto !important;
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DOS CARDS DA HOME (PÁGINA INDEX)
+   ========================================== */
+
+/* Comportamento vertical aplicado exclusivamente quando NÃO estiver no menu */
+main > .recipe-card,
+.intro .recipe-card,
+body:not(.menu-page) .recipe-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    display: block; 
+}
+
+main > .recipe-card .recipe-img,
+.intro .recipe-card .recipe-img,
+body:not(.menu-page) .recipe-card .recipe-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
+   SEÇÃO DO PLANEJADOR (PLANNER)
+   ========================================== */
+.planner-header{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.planner-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.planner-day{
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border-left: 4px solid var(--primary-color);
+}
+
+.planner-day h3{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.planner-day select{
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.planner-day select:focus{
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.planner-day select:last-child{
+    margin-bottom: 0; 
+}
+
+.planner-actions{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-planner{
+    background-color: var(--secondary-color);
+    color: var(--card-bg);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-planner:hover{
+    background-color: #b33f00;
+    transform: translateY(-2px);
+}
+
+.btn-planner.btn-secondary{
+    background-color: #7f8c8d;
+}
+
+.btn-planner.btn-secondary:hover{
+    background-color: #95a5a6;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE EM TELAS MAIORES */
+@media (min-width: 768px){
+    .header-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero{
+        padding: 6rem 4rem;
+        min-height: 450px;
+    }
+
+    .hero h1{
+        font-size: 3.2rem;
+    }
+
+    .planner-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .recipe-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+    .planner-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .recipe-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Classe utilitária para o filtro do JavaScript funcionar sem quebrar a Grid */
+.recipe-card.hide {
+    display: none !important;
+}
+
+/* ==========================================
+   SEÇÃO DE CHAMADA FINAL (HOME - INDEX)
+   ========================================== */
+.calling-to-plan {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    margin-top: 2rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+.calling-to-plan h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.calling-to-plan p {
+    color: var(--text-color);
+    max-width: 700px;
+    margin: 0 auto 2rem auto; /* Centraliza o texto e joga o botão para baixo */
+    font-size: 1.05rem;
+}
+
+/* Botão Start Planning */
+.btn-calling {
+    display: inline-block;
+    background-color: #c44500; /* Laranja terracota */
+    color: var(--card-bg) !important;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-calling:hover {
+    background-color: #9c3600; /* Terracota mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-calling:active {
+    transform: translateY(-1px);
+}
+
+/* Links da marca no rodapé */
+.footer-brand-links {
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-brand-links a {
+    color: var(--card-bg); /* Deixa os links brancos, combinando com o texto do rodapé */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-brand-links a:hover {
+    color: var(--secondary-color); /* Efeito laranja terracota ao passar o mouse */
+    text-decoration: underline;
+}

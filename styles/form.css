@@ -153,13 +153,13 @@ input[type="submit"]:hover {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
-    color: var(--text-color); /* Certifique-se de que combine com suas variáveis */
+    color: var(--text-color);
 }
 
 /* --- REGRA DE RESPONSIVIDADE (MEDIA QUERY) --- */
 @media screen and (min-width: 600px) {
     body {
-        /* Adiciona um fundo ligeiramente diferente ou gradiente para telas grandes, se desejar */
+        /* Adiciona um fundo ligeiramente diferente ou gradiente para telas grandes*/
         background-color: #f0f4f8; 
     }
 

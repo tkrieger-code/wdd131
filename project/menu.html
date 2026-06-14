@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Krie na Cozinha's menu of freezable recipes. Practical, nutritious dishes, tested for perfect freezing">
+    <meta name="author" content="Tatiane Krieger">
+    <title>Krie na Cozinha | Frozen Meal Menu</title>
+
+    <link rel="stylesheet" href="styles/mealprep.css">
+    <script src="scripts/mealprep.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="images/logo-krie.png" alt="Krie na Cozinha Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="planner.html">Planner Weekly</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-intro">
+            <h2>Practical Frozen Meal Menu</h2>
+            <p>All the recipes below have been balanced and tested to ensure they retain their flavor, nutrients, and ideal texture after thawing.</p>
+        </section>
+
+        <div class="filter-buttons">
+            <button class="btn-filter active" data-filter="all">All</button>
+            <button class="btn-filter" data-filter="chicken">Chicken</button>
+            <button class="btn-filter" data-filter="beef">Beef</button>
+            <button class="btn-filter" data-filter="veggie">Veggie</button>
+        </div>
+
+        <div class="menu-grid" id="menu-container">
+            
+            <article class="recipe-card" data-category="beef">
+                <img src="images/menu-lasanha.webp" alt="Special Bolognese Lasagna" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Beef</div>
+                <div class="card-details">
+                    <h3>Special Bolognese Lasagna</h3>
+                    <p>Handmade pasta layered with rustic meat sauce, ham and cheese. Excellent freezer stability.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 15min</span>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="chicken">
+                <img src="images/menu-fricasse.webp" alt="Creamy Chicken Fricassee" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Chicken</div>
+                <div class="card-details">
+                    <h3>Creamy Chicken Fricassee</h3>
+                    <p>Shredded chicken breast with light creamed corn, perfect for freezing in individual portions.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 12min</span>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="veggie">
+                <img src="images/menu-escondidinho.webp" alt="Pumpkin and Mushroom Casserole" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Veggie</div>
+                <div class="card-details">
+                    <h3>Pumpkin and Mushroom Casserole</h3>
+                    <p>Creamy butternut squash purée stuffed with a mix of mushrooms sautéed in herb-infused olive oil.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 15min</span>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="chicken">
+                <img src="images/pumpkin-soup.webp" alt="Pumpkin Soup with Chicken" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Chicken</div>
+                <div class="card-details">
+                    <h3>Pumpkin Soup with Chicken</h3>
+                    <p>Velvety butternut squash soup infused with aromatic herbs, with tender shredded chicken breast. Freezes beautifully without losing texture.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 10min</span>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="veggie">
+                <img src="images/caneloni-ricota.webp" alt="Ricotta and Broccoli Cannelloni" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Veggie</div>
+                <div class="card-details">
+                    <h3>Ricotta and Broccoli Cannelloni</h3>
+                    <p>Delicate pasta tubes generously stuffed with a creamy blend of fresh ricotta cheese and tender broccoli florets, smothered in a rich, rustic tomato sauce and topped with fresh basil. Perfect for individual portions.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 14min</span>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="beef">
+                <img src="images/carne-de-panela.webp" alt="Hearty Beef Stew" class="recipe-img" loading="lazy" width="500" height="300">
+                <div class="recipe-badge">Beef</div>
+                <div class="card-details">
+                    <h3>Hearty Beef Stew</h3>
+                    <p>Slow-cooked Brazilian beef stew with generous chunks of tender beef, large rustic potato wedges, and vibrant carrot slices, in a deep, rich gravy. Perfect for quick individual meals.</p>
+                    <span class="recipe-time">#⏱️# Reheating time: 15min</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Tatiane Krieger | Rio Grande do Sul, Brasil</p>
+        
+        <p class="footer-brand-links">
+            <a href="https://krienacozinha.kyte.site" target="_blank" rel="noopener">🌐 krienacozinha.kyte.site</a> | 
+            <a href="https://www.instagram.com/krienacozinha" target="_blank" rel="noopener">📸 @krienacozinha</a>
+        </p>
+
+        <p><a href="references.html" style="color: inherit; text-decoration: underline;">References</a></p>
+        <p id="lastModified"></p>
+    </footer>>
+    
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krie na Cozinha - Create your weekly frozen meal planner in Krie na Cozinha. Organize your week, select your dishes, and save your personalized plan.">
+    <meta name="author" content="Tatiane Krieger">
+    <title>Krie na Cozinha | Planner Weekly</title>
+
+    <link rel="stylesheet" href="styles/mealprep.css">
+    <script src="scripts/mealprep.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="images/logo-krie.png" alt="Krie na Cozinha Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="planner.html" class="active">Planner Weekly</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="planner-header">
+            <h2>Your Automated Weekly Planner</h2>
+            <p>Select the meals you want for each day of the week. Save your choices to access them later!</p>
+        </section>
+
+        <form id="planner-form">
+            <div class="planner-grid">
+
+                <div class="planner-day" data-day="Sunday">
+                    <h3>Sunday</h3>
+                    <label for="sunday-lunch" class="sr-only">Sunday Lunch</label>
+                    <select name="sunday-lunch" id="sunday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="sunday-dinner" class="sr-only">Sunday Dinner</label>
+                    <select name="sunday-dinner" id="sunday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+            
+                <div class="planner-day" data-day="Monday">
+                    <h3>Monday</h3>
+                    <label for="monday-lunch" class="sr-only">Monday Lunch</label>
+                    <select name="monday-lunch" id="monday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="monday-dinner" class="sr-only">Monday Dinner</label>
+                    <select name="monday-dinner" id="monday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+                <div class="planner-day" data-day="Tuesday">
+                    <h3>Tuesday</h3>
+                    <label for="tuesday-lunch" class="sr-only">Tuesday Lunch</label>
+                    <select name="tuesday-lunch" id="tuesday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="tuesday-dinner" class="sr-only">Tuesday Dinner</label>
+                    <select name="tuesday-dinner" id="tuesday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+                <div class="planner-day" data-day="Wednesday">
+                    <h3>Wednesday</h3>
+                    <label for="wednesday-lunch" class="sr-only">Wednesday Lunch</label>
+                    <select name="wednesday-lunch" id="wednesday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="wednesday-dinner" class="sr-only">Wednesday Dinner</label>
+                    <select name="wednesday-dinner" id="wednesday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+                <div class="planner-day" data-day="Thursday">
+                    <h3>Thursday</h3>
+                    <label for="thursday-lunch" class="sr-only">Thursday Lunch</label>
+                    <select name="thursday-lunch" id="thursday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="thursday-dinner" class="sr-only">Thursday Dinner</label>
+                    <select name="thursday-dinner" id="thursday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+                <div class="planner-day" data-day="Friday">
+                    <h3>Friday</h3>
+                    <label for="friday-lunch" class="sr-only">Friday Lunch</label>
+                    <select name="friday-lunch" id="friday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="friday-dinner" class="sr-only">Friday Dinner</label>
+                    <select name="friday-dinner" id="friday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+                <div class="planner-day" data-day="Saturday">
+                    <h3>Saturday</h3>
+                    <label for="saturday-lunch" class="sr-only">Saturday Lunch</label>
+                    <select name="saturday-lunch" id="saturday-lunch">
+                        <option value="">(Select the Lunch)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                    
+                    <label for="saturday-dinner" class="sr-only">Saturday Dinner</label>
+                    <select name="saturday-dinner" id="saturday-dinner">
+                        <option value="">(Select the Dinner)</option>
+                        <option value="lasanha">Special Bolognese Lasagna</option>
+                        <option value="fricasse">Creamy Chicken Fricassee</option>
+                        <option value="escondidinho">Pumpkin and Mushroom Casserole</option>
+                        <option value="beef-stew">Hearty Beef Stew</option>
+                        <option value="cannelloni">Ricotta and Broccoli Cannelloni</option>
+                        <option value="pumpkin-soup">Pumpkin Soup with Chicken</option>
+                    </select>
+                </div>
+
+            </div>     
+        
+            <div class="planner-actions">
+                <button type="submit" class="btn-planner" id="save-plan">Save Planner</button>
+                <button type="button" class="btn-planner btn-secondary" id="clear-plan">Clear Plan</button>
+            </div>
+    
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Tatiane Krieger | Rio Grande do Sul, Brasil</p>
+        
+        <p class="footer-brand-links">
+            <a href="https://krienacozinha.kyte.site" target="_blank" rel="noopener">🌐 krienacozinha.kyte.site</a> | 
+            <a href="https://www.instagram.com/krienacozinha" target="_blank" rel="noopener">📸 @krienacozinha</a>
+        </p>
+
+        <p><a href="references.html" style="color: inherit; text-decoration: underline;">References</a></p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
