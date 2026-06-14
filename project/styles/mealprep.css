@@ -130,7 +130,7 @@ main{
     z-index: 3; /* Garante que fique na frente do filtro escuro da imagem */
     display: inline-block;
     margin-top: 1.5rem;
-    background-color: var(--secondary-color); /* Laranja terracota da sua marca */
+    background-color: var(--secondary-color); /* Laranja terracota da minha marca */
     color: var(--card-bg) !important; /* Força o texto a ficar branco */
     text-decoration: none;
     padding: 0.8rem 2rem;
@@ -231,7 +231,7 @@ footer p{
     margin-right: auto;
 }
 
-/* Forçamos o comportamento horizontal usando !important para anular interferências da Home */
+/* Força o comportamento horizontal usando !important para anular interferências da Home */
 .menu-grid .recipe-card {
     background-color: #fff !important;
     border-radius: 8px !important;
